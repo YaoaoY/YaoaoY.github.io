@@ -41,7 +41,19 @@ Append a normal BibTeX entry to `_bibliography/papers.bib`. Useful optional fiel
 
 ## Local preview
 
-The official recommended workflow is Docker:
+Because this repository lives in OneDrive, use the included helper so generated
+files are written to `/private/tmp` instead of the synchronized folder:
+
+```bash
+./bin/serve-local
+```
+
+Then open `http://localhost:4000/`. Press `Control+C` to stop the server.
+
+Before the first run on a new computer, install Ruby 3.3+, Bundler, and the
+project dependencies with `bundle install`.
+
+Alternatively, the official Docker workflow is:
 
 ```bash
 docker compose pull
@@ -50,11 +62,11 @@ docker compose up
 
 Then open `http://localhost:8080/`.
 
-If Ruby 3.3 and Bundler are already installed, use:
+For a direct Ruby command, keep the local config enabled:
 
 ```bash
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --config _config.yml,_config_local.yml --livereload
 ```
 
 Then open `http://localhost:4000/`.

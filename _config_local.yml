@@ -1,0 +1,2 @@
+# Local preview output lives outside OneDrive to avoid sync contention.
+destination: /private/tmp/fuyao-huang-blog-preview
