@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://yaoaoy.github.io/sitemap.xml
